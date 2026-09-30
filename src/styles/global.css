@@ -1,0 +1,39 @@
+:root{--bg:#1c1a17;--surface:#26231f;--surface-2:#302c27;--text:#f5ead8;--muted:rgba(245,234,216,.64);--accent:#e08a52;--accent-hover:#f6a06b;--accent-ink:#1c1a17;--accent2:#aebf92;--divider:rgba(245,234,216,.14);--tag-bg:rgba(224,138,82,.16);--tag-fg:#ffc6a5;--tag2-bg:rgba(174,191,146,.16);--tag2-fg:#ccdbb2;--tagn-bg:rgba(245,234,216,.08);--tagn-fg:#dcd3c4;--shadow-sm:0 1px 2px rgba(0,0,0,.4);--shadow-md:0 3px 10px rgba(0,0,0,.45);--shadow-lg:0 12px 32px rgba(0,0,0,.5)}
+body[data-theme="light"]{--bg:#f5ead8;--surface:#ebddc5;--surface-2:#f9f4ed;--text:#201e1d;--muted:rgba(32,30,29,.62);--accent:#c67139;--accent-hover:#b2622d;--accent-ink:#f5ead8;--accent2:#7a8a5e;--divider:rgba(32,30,29,.16);--tag-bg:#ffe1d0;--tag-fg:#8c491a;--tag2-bg:#e1eecc;--tag2-fg:#3d472b;--tagn-bg:#f9f4ed;--tagn-fg:#474238;--shadow-sm:0 1px 2px rgba(46,43,37,.14);--shadow-md:0 3px 10px rgba(46,43,37,.16);--shadow-lg:0 12px 32px rgba(46,43,37,.22)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Figtree",system-ui,sans-serif;font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px}a:hover{color:var(--accent-hover)}
+h1,h2,h3,h4{margin:0;font-family:"Caprasimo",serif;font-weight:400;line-height:1.1;letter-spacing:-0.015em}
+p{margin:0}
+::selection{background:rgba(224,138,82,.35)}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes nbDraw{to{stroke-dashoffset:0}}
+@keyframes nbFade{to{opacity:1}}
+@keyframes nbPop{from{transform:scale(0)}to{transform:scale(1)}}
+@keyframes nbGrowX{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes nbSpin{to{transform:rotate(360deg)}}
+@keyframes nbPulse{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.35);opacity:0}}
+@keyframes nbAlong{0%{offset-distance:0%;opacity:0}15%{opacity:1}85%{opacity:1}100%{offset-distance:100%;opacity:0}}
+@keyframes nbRoll{0%{offset-distance:0%;opacity:0}8%{opacity:1}88%{opacity:1}100%{offset-distance:100%;opacity:0}}
+@keyframes nbLandLA{from{transform-origin:right center;transform:rotateY(80deg);opacity:.35}to{transform-origin:right center;transform:none;opacity:1}}
+@keyframes nbLandLB{from{transform-origin:right center;transform:rotateY(80deg);opacity:.35}to{transform-origin:right center;transform:none;opacity:1}}
+@keyframes nbLandRA{from{transform-origin:left center;transform:rotateY(-80deg);opacity:.35}to{transform-origin:left center;transform:none;opacity:1}}
+@keyframes nbLandRB{from{transform-origin:left center;transform:rotateY(-80deg);opacity:.35}to{transform-origin:left center;transform:none;opacity:1}}
+@keyframes zoomIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
+@keyframes riseIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-14px,18px) scale(1.06)}}
+@keyframes pulseDot{0%,100%{box-shadow:0 0 0 0 rgba(174,191,146,.5)}70%{box-shadow:0 0 0 7px rgba(174,191,146,0)}}
+@keyframes wave{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(18deg)}}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
+@keyframes speak{0%,32%{opacity:0;transform:translateY(6px) scale(.9)}6%,26%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes fieldIn{0%{opacity:0;transform:translateX(-10px)}12%,80%{opacity:1;transform:none}92%,100%{opacity:0}}
+@keyframes chip{0%,30%{opacity:0}5%,25%{opacity:1}100%{opacity:0}}
+@keyframes draw{0%,20%{stroke-dashoffset:120}55%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes travel{0%{transform:translateX(0);opacity:0}8%{opacity:1}45%{transform:translateX(112px) scale(.7)}55%{transform:translateX(112px) scale(.7)}92%{opacity:1}100%{transform:translateX(224px);opacity:0}}
+@keyframes typing{0%,15%{transform:scaleX(0)}55%,80%{transform:scaleX(1)}95%,100%{transform:scaleX(0)}}
+@keyframes docFade{0%,10%{opacity:1}50%,80%{opacity:.25}95%,100%{opacity:1}}
+@keyframes sparkle{0%,100%{transform:scale(.6) rotate(0deg);opacity:.4}50%{transform:scale(1.1) rotate(20deg);opacity:1}}
+@keyframes grow{0%{transform:scaleY(0)}30%,75%{transform:scaleY(1)}90%,100%{transform:scaleY(0)}}
+@keyframes send{0%,70%{transform:translate(0,0);opacity:0}74%{opacity:1}96%{transform:translate(70px,-40px);opacity:1}100%{opacity:0}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+body[data-motion="off"] *{animation:none!important;transition:none!important}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
